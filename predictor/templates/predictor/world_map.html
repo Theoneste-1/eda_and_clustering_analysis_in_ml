@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle ML - Global Map</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card { border-radius: 12px; }
+        .nav-link.active { font-weight: bold; }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white border-end sticky-top vh-100 p-3">
+                <div class="mb-4 ps-2 border-bottom pb-3">
+                    <h5 class="text-primary fw-bold mb-0">Vehicle ML</h5>
+                    <small class="text-muted">Global Analytics</small>
+                </div>
+                <div class="nav nav-pills flex-column">
+                    <a class="nav-link mb-1" href="{% url 'data_exploration' %}">Exploratory Data Analysis</a>
+                    <a class="nav-link mb-1 active" href="{% url 'world_map' %}">Global Map View</a>
+                    <a class="nav-link mb-1" href="{% url 'regression_analysis' %}">Regression Analysis</a>
+                    <a class="nav-link mb-1" href="{% url 'classification_analysis' %}">Classification Analysis</a>
+                    <a class="nav-link mb-1" href="{% url 'clustering_analysis' %}">Clustering Analysis</a>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <header class="mb-4 border-bottom pb-3">
+                    <h1 class="fw-bold text-dark">Global Vehicle Insights</h1>
+                    <p class="text-secondary mb-0">Zoom into Rwanda for district-level client distribution</p>
+                </header>
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-0">
+                        {{ world_map|safe }}
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

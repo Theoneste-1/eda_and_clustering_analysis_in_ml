@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test / type / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+*.sqlite3
+*.sqlite3-journal
+staticfiles/
+media/
+local_settings.py
+
+# IDEs / editors
+.vscode/
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ML / experiment artifacts
+wandb/
+mlruns/
+runs/
+lightning_logs/
+tb_logs/
+tensorboard/
+logs/
+checkpoints/
+artifacts/
+outputs/
+
+# Model/binary artifacts
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pt
+*.pth
+*.npz
