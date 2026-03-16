@@ -101,9 +101,14 @@
                                     <div class="text-muted small text-uppercase fw-bold mb-1">Baseline Silhouette</div>
                                     <div class="metric-value">{{ evaluations.baseline_silhouette }}</div>
                                 </div>
-                                <div class="col-md-6">
+                                {% comment %} <div class="col-md-4 border-end">
                                     <div class="text-muted small text-uppercase fw-bold mb-1">Training Sample</div>
                                     <div class="metric-value">{{ evaluations.refined_sample_size }} <span class="fs-6 text-muted fw-normal">/ {{ evaluations.full_sample_size }}</span></div>
+                                </div> {% endcomment %}
+                                <div class="col-md-4">
+                                    <div class="text-muted small text-uppercase fw-bold mb-1">Overall CV</div>
+                                    <div class="small text-muted">Income: <strong>{{ evaluations.overall_income_cv_pct|default:"-" }}</strong>%</div>
+                                    <div class="small text-muted">Price: <strong>{{ evaluations.overall_price_cv_pct|default:"-" }}</strong>%</div>
                                 </div>
                             </div>
                             

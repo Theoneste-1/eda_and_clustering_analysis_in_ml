@@ -13,8 +13,6 @@ env/
 ENV/
 
 # Local environment / secrets
-.env
-.env.*
 !.env.example
 !.env.template
 
@@ -50,7 +48,6 @@ media/
 local_settings.py
 
 # IDEs / editors
-.vscode/
 !.vscode/settings.json
 !.vscode/launch.json
 !.vscode/tasks.json
@@ -83,3 +80,5 @@ outputs/
 *.pt
 *.pth
 *.npz
+config.bat
+node_modules
